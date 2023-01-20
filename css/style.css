@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
+
+body {
+   font-family: 'Raleway', sans-serif; 
+    margin-left: 40px;
+} 
+
+nav {
+    display : flex;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+
+.logo {
+    width : 61px ;
+    height: 20px ;
+}
+
+.nav-links {
+    display: flex;
+    
+    margin-top: 0;
+    margin-right:10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+#hebergements, #activites {
+    padding-top : 48px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: black;
+}
+
+#hebergements:hover {
+    color: #0065FC;
+    border-top: 2px solid #0065fc;
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: bolder;
+    padding-top: 25px;
+}
+
+.sous-titre-h1 {
+    margin-top: -6px;;
+}
