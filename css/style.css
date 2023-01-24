@@ -21,7 +21,7 @@ ul {
 nav {
     display : flex;
     margin-top: 50px;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 article {
@@ -33,17 +33,16 @@ article {
     margin-right: 30px;
 }
 
-aside {
-    background-color: #f2f2f2;
-    border-radius: 20px;
-    padding-top: 25px;
-    padding-bottom: 10px;
-    padding-right: 35px;
-    max-width: 25%;
+section header {
+    display: flex;
 }
 
-aside header {
+
+footer {
+    background-color: #f2f2f2;
     display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 50px;
 }
 
 h1 {
@@ -55,6 +54,22 @@ h1 {
 h2 {
     font-size: 17px;
     padding-top: 5px;
+}
+
+aside h2 {
+    font-size: 22px;
+}
+
+footer ul {
+    padding-left: 0;
+}
+
+footer h4 {
+    font-size: 17px;
+}
+
+footer a {
+    color: #000000;
 }
 
 .hebergements,
@@ -191,10 +206,19 @@ i.fa-magnifying-glass {
     margin-left: 40px;
 }
 
-.div-hebergements {
+.liste-hebergements {
     display: flex;
+    flex-wrap: wrap;
 }
 
+.section2-main {
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    padding-right: 35px;
+    max-width: 25%;
+}
 .carte-hebergements {
     background-color: #FFFFFF;
     border-radius: 20px ;
@@ -202,6 +226,7 @@ i.fa-magnifying-glass {
     margin-bottom: 30px;
     width : 250px;
     padding: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
  }
 
  .fa-chart-line
@@ -216,6 +241,7 @@ i.fa-magnifying-glass {
     border-radius: 20px;
     margin-bottom: 35px;
     padding: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
 }
 
  .carte-hebergements figure {
@@ -284,4 +310,31 @@ i.fa-magnifying-glass {
     margin-left: 40px;
     font-weight: 600;
     font-size: 17px;
+}
+
+.liste-activites {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.liste-activites figure {
+    border-radius: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.liste-activites img {
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.liste-activites figcaption {
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    color: #000000;
+    font-weight: 600;
 }
