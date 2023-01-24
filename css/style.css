@@ -1,15 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
+/* Mettre un import normalize */
 
 body {
    font-family: 'Raleway', sans-serif; 
     margin-left: 40px;
 } 
 
+ul {
+    list-style-type: none;
+}
+
 nav {
     display : flex;
     margin-top: 50px;
     justify-content: space-between;
+}
+
+h2 {
+    font-size: 17px;
+    padding-top: 5px;
+}
+
+#hebergements,
+#activites {
+    padding-left: 30px;
+    padding-right: 30px;
+    color: black;
+}
+
+#hebergements:hover {
+    color: #0065fc;
+    border-top: 2px solid #0065fc;
 }
 
 .logo {
@@ -23,24 +44,8 @@ nav {
     margin-right:10px;
 }
 
-ul {
-    list-style-type: none;
-}
-
 a:link {
     text-decoration: none;
-}
-
-#hebergements, #activites {
-    padding-top : 48px;
-    padding-left: 30px;
-    padding-right: 30px;
-    color: black;
-}
-
-#hebergements:hover {
-    color: #0065FC;
-    border-top: 2px solid #0065fc;
 }
 
 h1 {
@@ -73,7 +78,6 @@ h1 {
     font-family: 'Raleway', sans-serif;
     font-size: 17px;
     font-weight: bold ;
-    /* color: #000000; */
 }
 
 .rechercher {
@@ -81,9 +85,9 @@ h1 {
     padding-left: 12px;
     padding-right: 12px;
     padding-bottom: 13px;
-    border: 1px solid #0065FC;
+    border: 1px solid #0065fc;
     border-radius: 0 10px 10px 0;
-    background-color: #0065FC;
+    background-color: #0065fc;
     color : white ;
     font-family: 'Raleway', sans-serif;
     font-size: 17px;
@@ -94,16 +98,16 @@ i.fa-magnifying-glass {
     display: none;
 }
 
-h2 {
-    font-size: 17px;
-    margin-top: 40px;
-}
 
-.section-filtres, .liste-filtres {
+.section-filtres, 
+.liste-filtres {
     display: flex;
 }
 
-.fa-money-bill-wave, .fa-person, .fa-heart, .fa-dog {
+.fa-money-bill-wave, 
+.fa-person, 
+.fa-heart, 
+.fa-dog {
     color: #0065FC;
     font-size: 19px;
 }
@@ -119,7 +123,7 @@ h2 {
 }
 
 .fa-info {
-    color: #0065FC;
+    color: #0065fc;
     font-size: 12px;
     border: 1px solid #d9d9d9;
     padding-left: 8px;
