@@ -5,8 +5,14 @@
 
 body {
    font-family: 'Raleway', sans-serif; 
-    margin-left: 40px;
+   padding-left: 40px;
+   max-width: 1400px;
+   margin : auto;
 } 
+
+main {
+    display: flex;
+}
 
 ul {
     list-style-type: none;
@@ -23,7 +29,21 @@ article {
     border-radius: 20px ;
     padding-top: 25px;
     padding-bottom: 30px;
-    max-width: 70%;
+    width: 65%;
+    margin-right: 30px;
+}
+
+aside {
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    padding-right: 35px;
+    max-width: 25%;
+}
+
+aside header {
+    display: flex;
 }
 
 h1 {
@@ -165,7 +185,8 @@ i.fa-magnifying-glass {
     margin-right: 10px;
 }
 
-.titre-hebergements {
+.titre-hebergements,
+.titre-populaire {
     font-size: 21px;
     margin-left: 40px;
 }
@@ -179,16 +200,36 @@ i.fa-magnifying-glass {
     border-radius: 20px ;
     margin-right: 30px;
     margin-bottom: 30px;
-    width : 220px;
+    width : 250px;
     padding: 3px;
  }
+
+ .fa-chart-line
+{
+    color: #0065fc;
+    margin-top: 27px;
+    margin-left: 92px;
+}
+
+.carte-populaire {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    margin-bottom: 35px;
+    padding: 3px;
+}
 
  .carte-hebergements figure {
     margin: 0;
     padding-bottom: 8px;
  }
 
-.carte-hebergements h3 {
+ .carte-populaire figure {
+    margin: 0;
+    display: flex;
+ }
+
+.carte-hebergements h3,
+.carte-populaire h3 {
     font-size: 15px;
     margin-top: 0;
     padding-top: 4px;
@@ -196,7 +237,8 @@ i.fa-magnifying-glass {
     padding-left: 10px;
 }
 
-.carte-hebergements p {
+.carte-hebergements p,
+.carte-populaire p {
     font-size: 13px;
     margin-top: -10px;
     color: #000000;
@@ -210,7 +252,15 @@ i.fa-magnifying-glass {
     border-radius: 20px 20px 0 0 ;
 }
 
-.etoiles-hebergements {
+.img-populaire {
+    width: 40%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 20px 0 0 20px;
+}
+
+.etoiles-hebergements,
+.etoiles-populaire {
     margin-top: -8px;
     font-size: 12px; 
     color: #0065fc;
@@ -219,6 +269,11 @@ i.fa-magnifying-glass {
 
 .etoiles-hebergements i {
     margin-right : -2px;
+}
+
+.etoiles-populaire i {
+    margin-top : 50px;
+    margin-right: -2px;
 }
 
 .last-star {
