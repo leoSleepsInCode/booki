@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
 /* @import url('https: //cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css'); */
 @import url('https: //necolas.github.io/normalize.css/8.0.1/normalize.css');
-/* Mettre un import normalize */
+
+/* ============================== BALISES ============================== */
+
+/* ---------- BALISES : Corps général ---------- */
 
 body {
    font-family: 'Raleway', sans-serif; 
@@ -10,39 +13,8 @@ body {
    margin : auto;
 } 
 
-main {
-    display: flex;
-}
-
 ul {
     list-style-type: none;
-}
-
-nav {
-    display : flex;
-    margin-top: 50px;
-    justify-content: space-around;
-}
-
-article {
-    background-color: #f2f2f2;
-    border-radius: 20px ;
-    padding-top: 25px;
-    padding-bottom: 30px;
-    width: 65%;
-    margin-right: 30px;
-}
-
-section header {
-    display: flex;
-}
-
-
-footer {
-    background-color: #f2f2f2;
-    display: flex;
-    justify-content: space-evenly;
-    padding-bottom: 50px;
 }
 
 h1 {
@@ -56,8 +28,48 @@ h2 {
     padding-top: 5px;
 }
 
+/* ---------- BALISES : Navigation ---------- */
+
+nav {
+    display : flex;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+
+/* ---------- BALISES : Main ---------- */
+
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+article {
+    background-color: #f2f2f2;
+    border-radius: 20px ;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    width: 68%;
+    margin-right: 30px;
+}
+
+/* header de la section à côté de <article> dans <main> */
+section header {
+    display: flex;
+} 
+
+/* ---------- BALISES : Aside ---------- */
+
 aside h2 {
     font-size: 22px;
+}
+
+/* ---------- BALISES : Footer ---------- */
+
+footer {
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 50px;
 }
 
 footer ul {
@@ -72,12 +84,14 @@ footer a {
     color: #000000;
 }
 
+/* ============================== CLASSES ============================== */
+
+/* ---------- CLASSES : Navigation ---------- */
+
 .hebergements,
 .activites {
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 47px;
-    color: black;
+    padding: 47px 30px 0 30px;
+    color:#000000;
 }
 
 .hebergements:hover,
@@ -107,9 +121,13 @@ a:link {
     text-decoration: none;
 }
 
+/* ---------- CLASSES : Header ---------- */
+
 .sous-titre-h1 {
     margin-top: -6px;;
 }
+
+/* ---------- CLASSES : Formulaire ---------- */
 
 .fa-location-dot {
     background-color: #f2f2f2;
@@ -119,13 +137,9 @@ a:link {
 }
 
 .search-bar {
-    padding-top: 13px;
-    padding-left: 10px;
-    padding-bottom: 13px;
+    padding: 13px 0 13px 10px;
     margin-left: -5px;
-    border-top: 1px solid #f2f2f2;
-    border-bottom: 1px solid #f2f2f2;
-    border-left: 1px solid #f2f2f2;
+    border: 1px solid #f2f2f2;
     border-right: none;
     width : 240px;
     font-family: 'Raleway', sans-serif;
@@ -134,10 +148,7 @@ a:link {
 }
 
 .rechercher {
-    padding-top: 13px;
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-bottom: 13px;
+    padding: 13px 12px;
     border: 1px solid #0065fc;
     border-radius: 0 10px 10px 0;
     background-color: #0065fc;
@@ -150,6 +161,8 @@ a:link {
 i.fa-magnifying-glass {
     display: none;
 }
+
+/* ---------- CLASSES : Filtre ---------- */
 
 .titre-filtres {
     padding-top: 17px;
@@ -188,17 +201,18 @@ i.fa-magnifying-glass {
     background-color: hsl(216, 100%, 94%);
 }
 
+/* ---------- CLASSES : paragraphe au dessus de main ---------- */
+
 .fa-info {
     color: #0065fc;
     font-size: 12px;
     border: 1px solid #d9d9d9;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 3px;
-    padding-bottom: 5px;
+    padding : 3px 8px 5px;
     border-radius: 50%;
     margin-right: 10px;
 }
+
+/* ---------- CLASSES : Main (Article & Section) ---------- */
 
 .titre-hebergements,
 .titre-populaire {
@@ -206,19 +220,18 @@ i.fa-magnifying-glass {
     margin-left: 40px;
 }
 
+.fa-chart-line
+{
+    color: #0065fc;
+    margin-top: 27px;
+    margin-left: 92px;
+}
+
 .liste-hebergements {
     display: flex;
     flex-wrap: wrap;
 }
 
-.section2-main {
-    background-color: #f2f2f2;
-    border-radius: 20px;
-    padding-top: 25px;
-    padding-bottom: 10px;
-    padding-right: 35px;
-    max-width: 25%;
-}
 .carte-hebergements {
     background-color: #FFFFFF;
     border-radius: 20px ;
@@ -229,11 +242,11 @@ i.fa-magnifying-glass {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
  }
 
- .fa-chart-line
-{
-    color: #0065fc;
-    margin-top: 27px;
-    margin-left: 92px;
+.section2-main {
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    padding: 25px 45px 10px 0;
+    max-width: 30%;
 }
 
 .carte-populaire {
@@ -312,6 +325,8 @@ i.fa-magnifying-glass {
     font-size: 17px;
 }
 
+/* ---------- CLASSES : Aside ---------- */
+
 .liste-activites {
     display: flex;
     justify-content: space-evenly;
@@ -332,9 +347,7 @@ i.fa-magnifying-glass {
 
 .liste-activites figcaption {
     font-size: 16px;
-    padding-top: 10px;
-    padding-bottom: 15px;
-    padding-left: 15px;
+    padding: 10px 0 15px 15px;
     color: #000000;
     font-weight: 600;
 }
