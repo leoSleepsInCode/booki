@@ -401,3 +401,31 @@ i.fa-magnifying-glass {
   margin: 0;
   border: 0;
 }
+
+/* ============================== MEDIA QUERIES ============================== */
+
+@media screen and (max-width: 991px) {
+
+  body {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+  main {
+      flex-direction: column;
+    }
+
+  article {
+      width: 100%;
+    }
+
+  .populaires {
+      margin-top: 30px;
+      width: 600px;
+    }
+
+  .filtres li {
+      display: flex;
+    }
+   
+}
