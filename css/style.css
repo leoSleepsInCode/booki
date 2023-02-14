@@ -8,6 +8,8 @@ body {
   font-family: 'Raleway', sans-serif; 
   max-width: 1400px;
   margin : auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* --------------------- Balises : Navigation --------------------- */
@@ -66,7 +68,7 @@ form input {
 form button {
   padding: 13px 12px;
   border: 1px solid #0065fc;
-  border-radius: 0 10px 10px 0;
+  border-radius: 0 15px 15px 0;
   background-color: #0065fc;
   color : white ;
   font-family: 'Raleway', sans-serif;
@@ -74,6 +76,13 @@ form button {
   font-weight: 500;
   cursor: pointer;
 }
+
+.filtres span {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 
 /* --------------------- Balises : Main --------------------- */
 
@@ -112,7 +121,7 @@ section header h2 {
 article ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 7%;
+  gap: 30px;
   margin-left: 40px; 
   width: 100%;
 }
@@ -120,7 +129,7 @@ article ul {
 article li {
   background-color: #FFFFFF;
   border-radius: 20px ;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   width : 25%; /*20% en version mobile*/
   padding: 3px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
@@ -251,9 +260,9 @@ i.fa-magnifying-glass {
   gap: 3%;
 }
 
-.filtres li {
+/* .filtres li {
   width: 100%;
-}
+} */
 
 .filtres button {
   display: flex;
@@ -277,6 +286,10 @@ i.fa-magnifying-glass {
 
 .filtres button {
   cursor: pointer;
+}
+
+.filtres .animaux {
+  width : 160px;
 }
 
 .fa-money-bill-wave, 
@@ -368,6 +381,7 @@ i.fa-magnifying-glass {
 
 .p-hebergements {
   margin-left: 40px;
+  margin-top: 50px;
   font-weight: 600;
   font-size: 17px;
   cursor: pointer;
@@ -384,7 +398,7 @@ i.fa-magnifying-glass {
   border-radius: 20px;
   padding : 0;
   margin : 0;
-  width: 270px;
+  width: 280px;
   height: 99%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
 }
@@ -397,7 +411,7 @@ i.fa-magnifying-glass {
 }
 
 .activites figcaption {
-  font-size: 16px;
+  font-size: 15px;
   padding: 15px 0 15px 15px;
   color: #000000;
   font-weight: 600;
@@ -445,8 +459,12 @@ i.fa-magnifying-glass {
     width: 33%;
   }
 
-  .populaires .extra-line {
-    padding-bottom: 18px;
+  .populaires img {
+    height : 160px ;
+  }
+
+  .hotel-2 {
+    margin-top: -25px;
   }
 
   .activites figure {
@@ -460,18 +478,41 @@ i.fa-magnifying-glass {
  
   .activites .caption {
     padding-top : 5px;
-    padding-right: 28%;
+    padding-right: 23%;
   }
 }
 
 /* ------------- Téléphone ------------- */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
+
+  body {
+    padding : 0;
+  }
 
   nav {
     display: block;
     padding-bottom: 25px ;
     border-bottom: 2px solid #f2f2f2;
+    margin-top: 0;
+  }
+
+  nav img {
+    margin-top: 20px;
+    margin-left: 40%;
+    margin-bottom: 50px;
+  }
+
+  nav ul {
+    margin-right: 0;
+  }
+
+  nav a {
+    
+  }
+
+  nav li {
+    
   }
 
   nav a:hover {
@@ -479,6 +520,16 @@ i.fa-magnifying-glass {
     border-top: none;
     padding-bottom: 25px;
     border-bottom: 2px solid #0065fc;
+  }
+
+  header {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  form {
+    margin-top: 30px;
+    margin-left: 10%;
   }
 
   form button {
@@ -497,7 +548,93 @@ i.fa-magnifying-glass {
     cursor: pointer;
   }
 
+  .filtres {
+    display: block;
+    margin-left: 15px;
+  }
+
+  .filtres ul {
+    flex-wrap: wrap;
+    gap : 15px;
+  }
+
+  .filtres li {
+    width: 170px ;
+  }
+
+  .filtres button {
+    font-size: 11px;
+  }
+
+  .info {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  article {
+    background-color: white;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  article h2 {
+    margin-left: 0;
+  }
+
+  article ul{
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  article li {
+    width : 90% ;
+  }
+
+  .p-hebergements{
+    display: none;
+  }
+
+  .populaires {
+    border-radius : 0;
+    width: 100%;
+  }
+
+  .populaires h2 {
+    margin-left: 15px;
+  }
+
+  .populaires ul {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .populaires li {
+    width : 90%;
+    margin-left: 15px;
+  }
+  
+  aside {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
   .activites {
     flex-direction: column;
+    gap : 25px;
+  }  
+
+  .activites figure {
+    width: 100%;
+    height: 200px;
+  }
+
+  footer {
+    flex-direction: column;
+    
+  }
+
+  footer ul,
+  footer h4 {
+    margin-left: 30px;
   }
 }
