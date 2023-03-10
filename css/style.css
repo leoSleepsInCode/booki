@@ -4,11 +4,10 @@
 
 
 /* --------------------- Balises : Navigation --------------------- */
-/* Tout formats : padding les plus populaires + étoiles populaires
-   Format tablette : textes des 2 dernières activités + taille images activités 
+/* Tout formats : étoiles populaires
+   Format tablette : taille images activités version proche tablette
    Format mobile : "animaux autorisés" qui dépasse, texte des 2 premières activités, placement du formulaire, bordures et placements des liens hébergements activités
-   Ranger le code dans le bon ordre (par cible), balises, classes, propriétés, 
-   Convertir tous les codes couleurs en HSL */
+  */
 
 /*  etc
 display
@@ -50,14 +49,10 @@ nav a {
   color:#000000; 
 }
 
-nav a:hover {
-  border-top: 2px solid #0065fc; 
-  color: #0065fc; 
-}
-
+nav a:hover,
 nav a:focus {
   border-top: 2px solid #0065fc; 
-  color: #0065fc;
+  color: #0065fc; 
 }
 
 nav img {
@@ -415,13 +410,13 @@ i.fa-magnifying-glass {
 }
 
 .last-star {
-  color:#f2f2f2; /*CHANGER EN HSL*/
+  color:#f2f2f2; 
 }
 
 .fa-chart-line {
   margin-top: 27px;
   margin-left: 92px;
-  color: #0065fc; /*CHANGER EN HSL*/
+  color: #0065fc; 
 }
 
 .p-hebergements {
@@ -494,7 +489,7 @@ i.fa-magnifying-glass {
  
   .activites .caption {
     padding-top : 5px;
-    padding-right: 23%;
+    padding-right: 5%;
   }
 }
 
@@ -506,11 +501,13 @@ i.fa-magnifying-glass {
     padding : 0;
   }
 
+  main {
+    flex-direction: column-reverse;
+  }
+  
   nav {
     display: block;
-    margin-top: 0;
-    border-bottom: 2px solid #f2f2f2; 
-    padding-bottom: 25px ;
+    margin-top: 0;    
   }
 
   nav img {
@@ -520,23 +517,27 @@ i.fa-magnifying-glass {
   }
 
   nav ul {
-    margin-right: 0;
-  }
-
-  nav a {
-    
+    text-align: center;
   }
 
   nav li {
-    
+    border-bottom: 2px solid #f2f2f2;
+    padding-bottom: 25px;
+    width: 50%;
   }
 
-  nav a:hover {
-    border-top: none;
+  nav a:hover,
+  nav a:focus { 
+        border-top: none;
+  }
+  
+   nav li:hover,
+   nav li:focus {
     border-bottom: 2px solid #0065fc; 
     padding-bottom: 25px;
-    color: #0065fc; 
+    color: #0065fc;  
   }
+   
 
   header {
     margin-left: 15px;
@@ -579,7 +580,7 @@ i.fa-magnifying-glass {
   }
 
   .filtres button {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .info {
@@ -588,9 +589,10 @@ i.fa-magnifying-glass {
   }
 
   article {
-    margin-left: 15px;
-    margin-right: 15px;
-    background-color: #ffffff; 
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #ffffff;
+
   }
 
   article h2 {
@@ -642,6 +644,11 @@ i.fa-magnifying-glass {
   .activites figure {
     width: 100%;
     height: 200px;
+  }
+
+  .activites figcaption,
+  .activites .caption {
+    padding-top: 10px;
   }
 
   footer {
