@@ -2,37 +2,62 @@
 /* @import url('https: //cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css'); */
 @import url('https://necolas.github.io/normalize.css/8.0.1/normalize.css');
 
-/* ============================== BALISES ============================== */
+
+/* --------------------- Balises : Navigation --------------------- */
+/* Tout formats : padding les plus populaires + étoiles populaires
+   Format tablette : textes des 2 dernières activités + taille images activités 
+   Format mobile : "animaux autorisés" qui dépasse, texte des 2 premières activités, placement du formulaire, bordures et placements des liens hébergements activités
+   Ranger le code dans le bon ordre (par cible), balises, classes, propriétés, 
+   Convertir tous les codes couleurs en HSL */
+
+/*  etc
+display
+position 
+top, bottom
+margin
+borders
+padding
+width 
+height
+fonts
+colors
+animation, etc
+curseurs
+etc */
+
+/* ================= ============= BALISES ============================== */
+
+/* --------------------- Balises : Body --------------------- */
 
 body {
-  font-family: 'Raleway', sans-serif; 
-  max-width: 1400px;
   margin : auto;
   padding-left: 20px;
   padding-right: 20px;
+  max-width: 1400px;
+  font-family: 'Raleway', sans-serif; 
 }
 
-/* --------------------- Balises : Navigation --------------------- */
+/* --------------------- Balises : Nav --------------------- */
 
 nav {
   display : flex;
-  margin-top: 50px;
   justify-content: space-between;
+  margin-top: 50px;
 }
 
 nav a {
   padding: 48px 30px 0 30px;
-  color:#000000;  
+  color:#000000; 
 }
 
 nav a:hover {
-  color: #0065fc;
-  border-top: 2px solid #0065fc;
+  border-top: 2px solid #0065fc; 
+  color: #0065fc; 
 }
 
 nav a:focus {
+  border-top: 2px solid #0065fc; 
   color: #0065fc;
-  border-top: 2px solid #0065fc;
 }
 
 nav img {
@@ -55,10 +80,10 @@ header p {
 /* --------------------- Balises : Form --------------------- */
 
 form input {
-  padding: 13px 0 13px 10px;
   margin-left: -5px;
   border: 1px solid #f2f2f2;
   border-right: none;
+  padding: 13px 0 13px 10px;
   width : 240px;
   font-family: 'Raleway', sans-serif;
   font-size: 17px;
@@ -66,14 +91,14 @@ form input {
 }
 
 form button {
-  padding: 13px 12px;
-  border: 1px solid #0065fc;
+  border: 1px solid #0065fc; 
   border-radius: 0 15px 15px 0;
-  background-color: #0065fc;
-  color : white ;
+  padding: 13px 12px;
   font-family: 'Raleway', sans-serif;
   font-size: 17px;
   font-weight: 500;
+  background-color: #0065fc; 
+  color: #ffffff;
   cursor: pointer;
 }
 
@@ -82,10 +107,38 @@ form button {
   margin-right: auto;
 }
 
+.filtres, 
+.filtres ul {
+  display: flex;
+  gap: 3%;
+}
 
+
+.filtres button {
+  display: flex;
+  border: 2px solid #f2f2f2; 
+  border-radius: 30px;
+  padding: 12px 15px;
+  width: 100% ;
+  font-family: 'Raleway', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  background-color: #ffffff;
+}
+
+.filtres button:hover {
+  background-color : #e0ecff;
+}
+
+.filtres button:focus {
+  background-color: #e0ecff;
+}
+
+.filtres button {
+  cursor: pointer;
+}
 
 /* --------------------- Balises : Main --------------------- */
-
 
 main {
   display: flex;
@@ -94,46 +147,38 @@ main {
 
 main div {
   margin-top: -8px;
-  font-size: 12px; 
-  color: #0065fc;
   padding-left: 10px;
+  font-size: 12px; 
+  color: #0065fc; 
 }
 
 article {
-  background-color: #f2f2f2;
-  border-radius: 20px ;
-  padding-top: 25px;
-  padding-bottom: 30px;
-  width: 68%;
   margin-right: 30px;
+  border-radius: 20px ;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-left: 40px;
+  background-color: #f2f2f2; 
 }
 
-section header {
-  display: flex;
-} 
-
-article h2,
-section header h2 {
+article h2 {
   font-size: 21px;
-  margin-left: 40px;
 }
 
 article ul {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  margin-left: 40px; 
   width: 100%;
 }
 
 article li {
-  background-color: #FFFFFF;
   border-radius: 20px ;
-  /* margin-bottom: 30px; */
-  width : 25%; /*20% en version mobile*/
   padding: 3px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
- }
+  width : 25%; /*20% en version mobile*/
+  background-color: #ffffff; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1); 
+}
 
 article figure {
   margin: 0;
@@ -141,35 +186,113 @@ article figure {
 }
 
 article h3 {
-  font-size: 15px;
   margin-top: 0;
   padding-top: 4px;
-  color: #000000;
   padding-left: 10px;
-}  
+  font-size: 15px;
+  color: #000000; 
+}
 
 article li p {
-  font-size: 13px;
   margin-top: -10px;
-  color: #000000;
   padding-left: 10px;
+  font-size: 13px;
+  color: #000000; 
 }
 
 article img {
+  border-radius: 20px 20px 0 0 ;
   width: 100%;
   height: 120px;
   object-fit: cover;
-  border-radius: 20px 20px 0 0 ;
 }
 
 article div i {
   margin-right : -2px;
 }
+section header {
+  display: flex;
+} 
+.populaires ul {
+  max-width: 90%;
+}
 
+.populaires li {
+  margin-bottom: 35px;
+  border-radius: 20px;
+  padding: 3px;
+  background-color: #ffffff; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1); 
+}
+
+.populaires figure {
+  display: flex;
+  margin: 0;
+}
+
+.populaires figcaption {
+  padding: 10px;
+  padding-right: 5%;
+  width: 60%;
+}
+
+.populaires h2 {
+  font-size: 21px;
+}
+
+.populaires h3 {
+  margin-top: 0;
+  padding-left: 10px;
+  font-size: 16px;
+  color: #000000;
+}
+
+.populaires li p {
+  margin-top: -10px;
+  padding-left: 10px;
+  font-size: 13px;
+  color: #000000; 
+}
+
+.populaires img {
+  border-radius: 20px 0 0 20px;
+  width: 40%;
+  height: 146px;
+  object-fit: cover;
+}
 /* --------------------- Balises : Aside --------------------- */
 
 aside h2 {
   font-size: 22px;
+}
+
+.activites figure {
+  margin : 0;
+  border-radius: 20px;
+  padding : 0;
+  width: 280px;
+  height: 99%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1); 
+}
+
+.activites img {
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  height: 87%;
+  object-fit: cover;
+}
+
+.activites figcaption {
+  padding: 15px 0 15px 15px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #000000; 
+}
+
+.activites li {
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 /* --------------------- Balises : Footer --------------------- */
@@ -189,11 +312,9 @@ footer section {
 
 footer h4 {
   font-size: 17px;
-  /* margin-left: 40px;  */
 }
 
 footer ul {
-  /* margin-left: 40px;  */
   margin-top: -15px;
   padding-left: 0;
 }
@@ -203,7 +324,7 @@ footer li {
 }
 
 footer a {
-  color: #000000;
+  color: #000000; 
 }
 
 /* --------------------- Balises Spécifiques --------------------- */
@@ -215,14 +336,14 @@ ul {
 }
 
 h1 {
+  padding-top: 25px;
   font-size: 22px;
   font-weight: bolder;
-  padding-top: 25px;
 }
 
 h2 {
-  font-size: 17px;
   padding-top: 5px;
+  font-size: 17px;
 }
 
 a:link {
@@ -231,17 +352,14 @@ a:link {
 
 /* ============================== CLASSES ============================== */
 
-/* ---------- CLASSES : Header ---------- */
-
-
 
 /* ---------- CLASSES : Formulaire ---------- */
 
 .fa-location-dot {
-  background-color: #f2f2f2;
   padding : 15px;
+  border: 1px solid #f2f2f2; 
   border-radius: 10px 0 0 10px; 
-  border: 1px solid #f2f2f2;
+  background-color: #f2f2f2; 
 }
 
 i.fa-magnifying-glass {
@@ -254,40 +372,6 @@ i.fa-magnifying-glass {
   margin-top: 30px;
 }
 
-.filtres, 
-.filtres ul {
-  display: flex;
-  gap: 3%;
-}
-
-/* .filtres li {
-  width: 100%;
-} */
-
-.filtres button {
-  display: flex;
-  font-family: 'Raleway', sans-serif;
-  font-size: 17px;
-  font-weight: 600;
-  background-color: white;
-  border: 2px solid #f2f2f2;
-  border-radius: 30px;
-  padding: 12px 15px;
-  width: 100% ;
-}
-
-.filtres button:hover {
-  background-color : hsl(216, 100%, 94%);
-}
-
-.filtres button:focus {
-  background-color: hsl(216, 100%, 94%);
-}
-
-.filtres button {
-  cursor: pointer;
-}
-
 .filtres .animaux {
   width : 160px;
 }
@@ -296,72 +380,29 @@ i.fa-magnifying-glass {
 .fa-person, 
 .fa-heart, 
 .fa-dog {
-  color: #0065FC;
-  font-size: 19px;
   padding-right: 5px;
+  font-size: 19px;
+  color: #0065FC; 
 }
 
 /* ---------- CLASSES : paragraphe au dessus de main ---------- */
 
 .fa-info {
-  color: #0065fc;
-  font-size: 12px;
-  border: 1px solid #d9d9d9;
-  padding : 3px 8px 5px;
-  border-radius: 50%;
   margin-right: 10px;
+  border: 1px solid #d9d9d9; 
+  border-radius: 50%;
+  padding : 3px 8px 5px;
+  font-size: 12px;
+  color: #0065fc; 
 }
 
 /* ---------- CLASSES : Main (Article & Section) ---------- */
 
 .populaires {
-  background-color: #f2f2f2;
   border-radius: 20px;
-  padding: 25px 45px 10px 0;
-  /* max-width: 30%; */
-}
-
-.populaires ul {
-    margin-left: 40px;
-}
-
-.populaires li {
-  background-color: #FFFFFF;
-  border-radius: 20px;
-  margin-bottom: 35px;
-  padding: 3px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-}
-
-.populaires figure {
-  margin: 0;
-  display: flex;
-}
-
-.populaires figcaption {
-  width: 60%;
-}
-
-.populaires h3 {
-  font-size: 15px;
-  margin-top: 0;
-  padding-top: 4px;
-  color: #000000;
-  padding-left: 10px;
-}
-
-.populaires li p {
-  font-size: 13px;
-  margin-top: -10px;
-  color: #000000;
-  padding-left: 10px;
-}
-
-.populaires img {
-  width: 40%;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 20px 0 0 20px;
+  padding-top: 20px;
+  padding-left: 3%;
+  background-color: #f2f2f2; 
 }
 
 .populaires div i {
@@ -369,14 +410,18 @@ i.fa-magnifying-glass {
   margin-right: -2px;
 }
 
+.populaires .extra-line {
+  padding-bottom: 10px;
+}
+
 .last-star {
-  color:#f2f2f2;
+  color:#f2f2f2; /*CHANGER EN HSL*/
 }
 
 .fa-chart-line {
-  color: #0065fc;
   margin-top: 27px;
   margin-left: 92px;
+  color: #0065fc; /*CHANGER EN HSL*/
 }
 
 .p-hebergements {
@@ -392,35 +437,6 @@ i.fa-magnifying-glass {
 .activites {
   display: flex;
   justify-content: space-between;
-}
-
-.activites figure {
-  border-radius: 20px;
-  padding : 0;
-  margin : 0;
-  width: 280px;
-  height: 99%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-}
-
-.activites img {
-  border-radius: 20px 20px 0 0;
-  width: 100%;
-  height: 87%;
-  object-fit: cover;
-}
-
-.activites figcaption {
-  font-size: 15px;
-  padding: 15px 0 15px 15px;
-  color: #000000;
-  font-weight: 600;
-}
-
-.activites li {
-  padding: 0;
-  margin: 0;
-  border: 0;
 }
 
 /* ============================== MEDIA QUERIES ============================== */
@@ -492,9 +508,9 @@ i.fa-magnifying-glass {
 
   nav {
     display: block;
-    padding-bottom: 25px ;
-    border-bottom: 2px solid #f2f2f2;
     margin-top: 0;
+    border-bottom: 2px solid #f2f2f2; 
+    padding-bottom: 25px ;
   }
 
   nav img {
@@ -516,10 +532,10 @@ i.fa-magnifying-glass {
   }
 
   nav a:hover {
-    color: #0065fc;
     border-top: none;
+    border-bottom: 2px solid #0065fc; 
     padding-bottom: 25px;
-    border-bottom: 2px solid #0065fc;
+    color: #0065fc; 
   }
 
   header {
@@ -538,13 +554,13 @@ i.fa-magnifying-glass {
 
   i.fa-magnifying-glass {
     display:inline-flex;
-    padding: 13px 12px;
-    border: 1px solid #0065fc;
+    border: 1px solid #0065fc; 
     border-radius: 0 10px 10px 0;
-    background-color: #0065fc;
-    color: white;
+    padding: 13px 12px;
     font-size: 17px;
     font-weight: 500;
+    background-color: #0065fc; 
+    color: #ffffff; 
     cursor: pointer;
   }
 
@@ -572,9 +588,9 @@ i.fa-magnifying-glass {
   }
 
   article {
-    background-color: white;
     margin-left: 15px;
     margin-right: 15px;
+    background-color: #ffffff; 
   }
 
   article h2 {
@@ -609,8 +625,8 @@ i.fa-magnifying-glass {
   }
 
   .populaires li {
-    width : 90%;
     margin-left: 15px;
+    width : 90%;
   }
   
   aside {
