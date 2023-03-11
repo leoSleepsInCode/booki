@@ -4,25 +4,8 @@
 
 
 /* --------------------- Balises : Navigation --------------------- */
-/* Tout formats : étoiles populaires
-   Format tablette : taille images activités version proche tablette
-   Format mobile : "animaux autorisés" qui dépasse, texte des 2 premières activités, placement du formulaire, bordures et placements des liens hébergements activités
-  */
 
-/*  etc
-display
-position 
-top, bottom
-margin
-borders
-padding
-width 
-height
-fonts
-colors
-animation, etc
-curseurs
-etc */
+
 
 /* ================= ============= BALISES ============================== */
 
@@ -137,40 +120,37 @@ form button {
 
 main {
   display: flex;
-  justify-content: space-between;
+  gap: 3%;
 }
 
 main div {
-  margin-top: -8px;
-  padding-left: 10px;
   font-size: 12px; 
   color: #0065fc; 
 }
 
 article {
-  margin-right: 30px;
+  box-sizing: border-box;
   border-radius: 20px ;
-  padding-top: 20px;
-  padding-bottom: 30px;
-  padding-left: 40px;
+  padding: 20px 40px 0px 40px;
   background-color: #f2f2f2; 
 }
 
 article h2 {
   font-size: 21px;
+    padding-bottom: 10px;
 }
 
 article ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 28px;
   width: 100%;
 }
 
 article li {
   border-radius: 20px ;
-  padding: 3px;
-  width : 25%; /*20% en version mobile*/
+  padding: 4px;
+  width : calc((100% - 80px) / 3);
   background-color: #ffffff; 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1); 
 }
@@ -180,17 +160,19 @@ article figure {
   padding-bottom: 8px;
 }
 
+article figcaption {
+  padding-left: 10px;
+}
+
 article h3 {
   margin-top: 0;
   padding-top: 4px;
-  padding-left: 10px;
   font-size: 15px;
   color: #000000; 
 }
 
 article li p {
   margin-top: -10px;
-  padding-left: 10px;
   font-size: 13px;
   color: #000000; 
 }
@@ -202,20 +184,22 @@ article img {
   object-fit: cover;
 }
 
-article div i {
-  margin-right : -2px;
-}
-section header {
+.populaires header {
   display: flex;
+  justify-content: space-between;
+  align-items: center ;
 } 
+
 .populaires ul {
-  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
 }
 
 .populaires li {
-  margin-bottom: 35px;
   border-radius: 20px;
-  padding: 3px;
+  padding: 4px;
+  height: 132px;
   background-color: #ffffff; 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1); 
 }
@@ -226,36 +210,48 @@ section header {
 }
 
 .populaires figcaption {
-  padding: 10px;
-  padding-right: 5%;
-  width: 60%;
+  display: flex;
+  flex-direction: column;
+  padding: 4% 10px 0px 6%;
 }
 
 .populaires h2 {
   font-size: 21px;
+  padding-bottom: 10px;
 }
 
 .populaires h3 {
   margin-top: 0;
-  padding-left: 10px;
+  margin-bottom: 0;
+  padding-bottom: 6px;
   font-size: 16px;
   color: #000000;
 }
 
 .populaires li p {
-  margin-top: -10px;
-  padding-left: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: 13px;
   color: #000000; 
 }
 
 .populaires img {
   border-radius: 20px 0 0 20px;
-  width: 40%;
-  height: 146px;
+  width: 35%;
+  min-width: 35%;  
+  height: 130px; 
   object-fit: cover;
 }
+
+.populaires div {
+  margin-top: auto;
+  padding-bottom: 5px;
+}
 /* --------------------- Balises : Aside --------------------- */
+
+aside ul {
+  box-sizing: border-box;
+}
 
 aside h2 {
   font-size: 22px;
@@ -265,7 +261,8 @@ aside h2 {
   margin : 0;
   border-radius: 20px;
   padding : 0;
-  width: 280px;
+  width: 23vw;
+  max-width: 280px;
   height: 99%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1); 
 }
@@ -395,18 +392,8 @@ i.fa-magnifying-glass {
 
 .populaires {
   border-radius: 20px;
-  padding-top: 20px;
-  padding-left: 3%;
+  padding: 20px 30px 0px 30px;
   background-color: #f2f2f2; 
-}
-
-.populaires div i {
-  margin-top : 50px;
-  margin-right: -2px;
-}
-
-.populaires .extra-line {
-  padding-bottom: 10px;
 }
 
 .last-star {
@@ -414,14 +401,12 @@ i.fa-magnifying-glass {
 }
 
 .fa-chart-line {
-  margin-top: 27px;
-  margin-left: 92px;
   color: #0065fc; 
 }
 
 .p-hebergements {
-  margin-left: 40px;
-  margin-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-weight: 600;
   font-size: 17px;
   cursor: pointer;
@@ -447,31 +432,31 @@ i.fa-magnifying-glass {
 
   main {
     flex-direction: column;
+    gap: 30px;
   }
 
   article {
     width: 100%;
   }
 
-  article li {
-    width : 25%;
-  }
-
-  .populaires {
-    margin-top: 30px;
-  }
-
   .populaires ul {
-    display: flex;
-    gap : 2%;
+    flex-direction: row;
   }
    
   .populaires li {
     width: 33%;
   }
 
+  .populaires h3 {
+    font-size: 14px ;
+  }
+
+  .populaires li p {
+    font-size: 12px;
+  }
+
   .populaires img {
-    height : 160px ;
+    width : 100px ;
   }
 
   .hotel-2 {
@@ -530,7 +515,7 @@ i.fa-magnifying-glass {
   nav a:focus { 
         border-top: none;
   }
-  
+
    nav li:hover,
    nav li:focus {
     border-bottom: 2px solid #0065fc; 
@@ -559,7 +544,6 @@ i.fa-magnifying-glass {
     border-radius: 0 10px 10px 0;
     padding: 13px 12px;
     font-size: 17px;
-    font-weight: 500;
     background-color: #0065fc; 
     color: #ffffff; 
     cursor: pointer;
@@ -614,21 +598,20 @@ i.fa-magnifying-glass {
 
   .populaires {
     border-radius : 0;
-    width: 100%;
+    /* width: 100%; */
   }
 
   .populaires h2 {
-    margin-left: 15px;
+    /* margin-left: 15px; */
   }
 
   .populaires ul {
-    flex-direction: column;
-    margin-left: 0;
+    
   }
 
   .populaires li {
-    margin-left: 15px;
-    width : 90%;
+    /* margin-left: 15px; */
+    width : 100%;
   }
   
   aside {
