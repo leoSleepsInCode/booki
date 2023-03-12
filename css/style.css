@@ -116,6 +116,7 @@ form button {
   cursor: pointer;
 }
 
+
 /* --------------------- Balises : Main --------------------- */
 
 main {
@@ -136,8 +137,11 @@ article {
 }
 
 article h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 20px;
+  padding-bottom:25px;
   font-size: 21px;
-    padding-bottom: 10px;
 }
 
 article ul {
@@ -216,8 +220,11 @@ article img {
 }
 
 .populaires h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 20px;
+  padding-bottom: 25px;
   font-size: 21px;
-  padding-bottom: 10px;
 }
 
 .populaires h3 {
@@ -262,8 +269,8 @@ aside h2 {
   border-radius: 20px;
   padding : 0;
   width: 23vw;
-  max-width: 280px;
-  height: 99%;
+  max-width: 320px;
+  height: 90%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1); 
 }
 
@@ -334,7 +341,6 @@ h1 {
 }
 
 h2 {
-  padding-top: 5px;
   font-size: 17px;
 }
 
@@ -362,6 +368,7 @@ i.fa-magnifying-glass {
 
 .filtres {
   margin-top: 30px;
+  align-items: center;
 }
 
 .filtres .animaux {
@@ -379,11 +386,21 @@ i.fa-magnifying-glass {
 
 /* ---------- CLASSES : paragraphe au dessus de main ---------- */
 
-.fa-info {
-  margin-right: 10px;
+.info {
+  display: flex;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.info p {
+  padding-left: 7px;
+}
+
+.fa-info {  
   border: 1px solid #d9d9d9; 
   border-radius: 50%;
-  padding : 3px 8px 5px;
+  padding : 3px 8px 5px; 
   font-size: 12px;
   color: #0065fc; 
 }
@@ -435,8 +452,26 @@ i.fa-magnifying-glass {
     gap: 30px;
   }
 
+  .filtres,
+  .filtres ul {
+    gap: 2%;
+  }
+
+  .filtres .animaux {
+    width: 150px;
+  }
+
+  .filtres button {
+    font-size: 98%;
+  }
+
   article {
     width: 100%;
+  }
+
+  .populaires {
+    padding-top: 10px;
+    padding-bottom: 45px;
   }
 
   .populaires ul {
@@ -448,7 +483,7 @@ i.fa-magnifying-glass {
   }
 
   .populaires h3 {
-    font-size: 14px ;
+    font-size: 15px ;
   }
 
   .populaires li p {
@@ -486,58 +521,53 @@ i.fa-magnifying-glass {
     padding : 0;
   }
 
-  main {
-    flex-direction: column-reverse;
-  }
-  
   nav {
     display: block;
     margin-top: 0;    
   }
-
+  
   nav img {
     margin-top: 20px;
     margin-left: 40%;
     margin-bottom: 50px;
   }
-
+  
   nav ul {
     text-align: center;
   }
-
+  
   nav li {
     border-bottom: 2px solid #f2f2f2;
     padding-bottom: 25px;
     width: 50%;
   }
-
+  
   nav a:hover,
   nav a:focus { 
-        border-top: none;
+    border-top: none;
   }
-
-   nav li:hover,
-   nav li:focus {
+  
+  nav li:hover,
+  nav li:focus {
     border-bottom: 2px solid #0065fc; 
     padding-bottom: 25px;
     color: #0065fc;  
   }
-   
-
+  
   header {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
-
+  
   form {
     margin-top: 30px;
-    margin-left: 10%;
+    margin-left: 20px;;
   }
-
+  
   form button {
     display: none;
   }
-
+  
   i.fa-magnifying-glass {
     display:inline-flex;
     border: 1px solid #0065fc; 
@@ -548,48 +578,79 @@ i.fa-magnifying-glass {
     color: #ffffff; 
     cursor: pointer;
   }
-
+  
   .filtres {
     display: block;
-    margin-left: 15px;
+    margin-left: 5%;
+    margin-right: 3%;
   }
-
+  
   .filtres ul {
     flex-wrap: wrap;
     gap : 15px;
   }
-
+  
   .filtres li {
-    width: 170px ;
+    width: 155px ;
+  }
+  
+  .filtres button {
+    font-size: 11px;
+    align-items: center;
+  }
+  
+  .filtres button span {
+    margin-left: 5px;
+  }
+  
+  .filtres .animauxButton {
+    padding-left : 8px;
+    padding-right: 8px;
   }
 
-  .filtres button {
-    font-size: 12px;
+  .filtres .animaux {
+    margin-left: 0;
+  }
+
+  .filtres .fa-dog {
+    padding-right: 0;
   }
 
   .info {
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
+
+  .info .fa-info {
+    align-self: start;
+    margin-top: 15px;
+  }
+
 
   article {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-top: 0;
+    padding-left: 20px;
+    padding-right: 20px;
     background-color: #ffffff;
-
   }
-
+  
+  main {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+  
   article h2 {
-    margin-left: 0;
+    padding-top: 30px;
   }
 
   article ul{
     flex-direction: column;
     margin-left: 0;
+    gap : 10px;
   }
 
   article li {
-    width : 90% ;
+    width : 98% ;
   }
 
   .p-hebergements{
@@ -598,25 +659,25 @@ i.fa-magnifying-glass {
 
   .populaires {
     border-radius : 0;
-    /* width: 100%; */
-  }
-
-  .populaires h2 {
-    /* margin-left: 15px; */
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .populaires ul {
-    
+    flex-direction: column;
   }
 
   .populaires li {
-    /* margin-left: 15px; */
-    width : 100%;
+    width : 98%;
   }
   
+  .populaires figcaption {
+    padding: 10px 0 0 20px;
+  }
+
   aside {
-    margin-left: 15px;
-    margin-right: 15px;
+    padding: 40px 20px 35px 20px;
+    padding-right: 20px;
   }
 
   .activites {
@@ -624,8 +685,13 @@ i.fa-magnifying-glass {
     gap : 25px;
   }  
 
+ .activites li {
+    width : 100%;
+  }
+
   .activites figure {
     width: 100%;
+    max-width: none;
     height: 200px;
   }
 
